@@ -1,1 +1,2 @@
-# notes
+# Notes
+ * Notes for gSchool
