@@ -54,7 +54,7 @@ Class Smoker extends Person {
 ```
 
 ## Super method
- * Allows you to access the method in the super class. 
+ * Allows you to access the method in the super class.
 
 ```Java
 Class Person {
@@ -69,3 +69,55 @@ Class Smoker extends Person {
   }
 }
 ```
+## Constructors are called from the top down
+
+```Java
+class Order {
+  Order(){
+    System.out.println('thing');
+  }
+}
+class SpecialOrder extends Order{
+  SpecialOrder() {
+    System.out.println('thing from SpecialOrder');
+  }
+}
+class VerySpecialOrder extends SpecialOrder {
+  VerySpecialOrder() {
+    System.out.println('thing from VerySpecialOrder');
+  }
+}
+
+// Would print
+// thing
+// thing from SpecialOrder
+// thing from VerySpecialOrder
+```
+  * If it takes a parameter
+
+```Java
+class Order {
+  int amount;
+  Order(int amount){
+    System.out.println('thing');
+  }
+}
+class SpecialOrder extends Order{
+  SpecialOrder(int amount) {
+    System.out.println('thing from SpecialOrder');
+  }
+}
+class VerySpecialOrder extends SpecialOrder {
+  VerySpecialOrder(int amount) {
+    System.out.println('thing from VerySpecialOrder');
+  }
+}
+
+// Would print
+// thing
+// thing from SpecialOrder
+// thing from VerySpecialOrder
+```
+
+## Why??
+  * Keep your code DRY (do not repeat yourself)
