@@ -3,6 +3,10 @@
 ## Identify
 * Linear collection of data elements called nodes, referencing the next node
 
+## Different kinds
+* Doubly
+* Circular
+
 ## Pros and Cons
 * Dynamic data structure (good)
 * Node operations are easy to implement (good)
