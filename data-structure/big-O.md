@@ -35,6 +35,7 @@ function print50Nums() {
 ```
 
 * The run time is always the same
+* Constant
 * O(50) or O(1)
 
 ```js
@@ -48,3 +49,25 @@ function sum(numbers) {
 ```
 * The runtime is not always the same
 * Each time the input grows the time increases in the same way
+* Linear
+* O(n)
+
+```js
+function sumMatrix(matrix) {
+  var total = 0;
+  for (var i = 0; i < matrix.length; i++) {
+    for (var j = 0; j < matrix[i].length; j++) {
+      total += matrix[i][j]
+    }
+  }
+  return total;
+}
+```
+* The runtime is not always the same
+* It's n times n
+* Quadratic
+* O(n^2)
+
+## When it comes into play
+* access time
+* search time
